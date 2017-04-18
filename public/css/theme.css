@@ -1,0 +1,245 @@
+@font-face {
+	font-family: 'icomoon';
+	src: url('../fonts/icomoon.eot?ohhc9n');
+	src: url('../fonts/icomoon.eot?ohhc9n#iefix') format('embedded-opentype'), url('../fonts/icomoon.ttf?ohhc9n') format('truetype'), url('../fonts/icomoon.woff?ohhc9n') format('woff'), url('../fonts/icomoon.svg?ohhc9n#icomoon') format('svg');
+	font-weight: normal;
+	font-style: normal;
+}
+
+* {
+	font-family: 'Open Sans', sans-serif;
+	font-size: 14px;
+	box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+}
+
+*:focus {
+	outline: none;
+}
+
+body {
+	background-color: #E8EAF6;
+}
+
+.left {
+	float: left;
+}
+
+.container {
+	padding: 15px 15px;
+}
+
+.list-container {
+	background-color: #fff;
+	width: 500px;
+	-webkit-box-shadow: 10px 0px 20px 0px #8a8a8a;
+	-moz-box-shadow: 10px 0px 20px 0px #8a8a8a;
+	box-shadow: 10px 0px 20px 0px #8a8a8a;
+	height: 554px;
+}
+
+.items {
+	background: #689F38;
+	color: #fff;
+	display: block;
+	padding: 14px 8px;
+	box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+	width: 100%;
+	font-size: 16px;
+	margin-bottom: 10px;
+}
+
+.scrolling-content {
+	overflow-y: scroll;
+	height: 440px;
+	background: #fff;
+	margin-right: 10px;
+}
+
+.scrolling-content div.outer-box {
+	padding: 0 10px;
+	min-height: 440px;
+	display: table;
+	width: 100%;
+	box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+}
+
+.scrolling-content div.outer-box ul {
+	list-style-type: none;
+	display: table-cell;
+	vertical-align: bottom;
+	width: 100%;
+}
+
+.scrolling-content div.outer-box ul li {
+	width: 100%;
+	color: #212121;
+	display: -webkit-box;
+	display: -moz-box;
+	display: -ms-flexbox;
+	display: -webkit-flex;
+	display: flex;
+	flex-wrap: wrap;
+}
+
+.scrolling-content div.outer-box ul li>* {
+	display: inline-block;
+}
+
+.outer-box span.name {
+	border-radius: 50px;
+	background: #8BC34A;
+	color: #fff;
+	text-align: center;
+	line-height: 50px;
+	flex: 1 0 11%;
+	height: 50px;
+}
+
+.outer-box span.entry {
+	background: #DCEDC8;
+	padding: 15px 5px 15px 15px;
+	color: #212121;
+	margin-left: 5%;
+	position: relative;
+	flex: 1 0 64%;
+}
+
+.outer-box li.editing span.entry {
+	flex: 1 0 74%;
+}
+
+.outer-box span.entry:before {
+	position: absolute;
+	left: -15px;
+	content: "\A";
+	border-style: solid;
+	border-width: 10px 15px 10px 0;
+	border-color: transparent #DCEDC8 transparent transparent;
+}
+
+li.editing .entry span, li.editing button.edit {
+	display: none!important;
+}
+
+li.editing .entry input.edit {
+	border: 0;
+	padding: 0;
+	margin: 0;
+	background: transparent;
+	width: 100%;
+}
+
+.scrolling-content div ul,
+.scrolling-content p {
+	margin: 0;
+	padding: 0;
+}
+
+.scrolling-content::-webkit-scrollbar-track {
+	background-color: #F1F8E9;
+}
+
+.scrolling-content::-webkit-scrollbar {
+	background-color: #FCE4EC;
+}
+
+.scrolling-content::-webkit-scrollbar-thumb {
+	background-color: #689F38;
+}
+
+.message {
+	background: #4CAF50;
+	margin-top: 10px;
+}
+
+.message input.new-note {
+	border: 0;
+	background-color: transparent;
+	padding: 10px;
+	width: 100%;
+	box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+	color: #e0e2f1;
+	font-size: 18px;
+}
+
+.message input.new-note::-webkit-input-placeholder {
+	color: #e0e2f1;
+}
+
+.message input.new-note::-moz-placeholder {
+	color: #e0e2f1;
+}
+
+.message input.new-note:-ms-input-placeholder {
+	color: #e0e2f1;
+}
+
+.message input.new-note:-moz-placeholder {
+	color: #e0e2f1;
+}
+
+button.edit,
+button.delete {
+	background-color: #DCEDC8;
+	border: none;
+	background-repeat: no-repeat;
+	cursor: pointer;
+	flex: 1 0 10%;
+}
+
+.timestamp {
+	margin-bottom: 10px;
+	text-align: right;
+	font-size: 13px;
+	flex: 0 1 100%;
+}
+
+[class^="icon-"],
+[class*=" icon-"] {
+	/* use !important to prevent issues with browser extensions that change fonts */
+	font-family: 'icomoon' !important;
+	speak: none;
+	font-style: normal;
+	font-weight: normal;
+	font-variant: normal;
+	text-transform: none;
+	line-height: 1;
+	color: #212121;
+	/* Better Font Rendering =========== */
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+}
+
+.icon-pencil:before {
+	content: "\e905";
+}
+
+.icon-cross:before {
+	content: "\ea0f";
+}
+
+@media (min-width: 768px) {
+	.container {
+		width: 750px;
+	}
+}
+
+@media (min-width: 992px) {
+	.container {
+		width: 970px;
+	}
+}
+
+@media (min-width: 1200px) {
+	.container {
+		width: 1170px;
+	}
+}
